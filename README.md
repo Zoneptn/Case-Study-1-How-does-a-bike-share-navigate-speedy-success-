@@ -14,4 +14,11 @@ This problem will be addressed using the six steps of the data analysis process 
 5. Share
 6. Act
 
+###1. Ask
+Creating a marketing program to convert casual riders into members.
+
+The future marketing program will be guided by three key questions:
+1. How do annual members and casual riders use Cyclistic bikes differently?
+2. Why would casual riders buy Cyclistic annual memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
   
