@@ -33,7 +33,7 @@ The data source for this analysis consists of two quarterly files: "Divvy 2019 Q
 
 ### 3.3 Prepare
 Program for data cleaning: R\
-\underline{The data preparation in R}
+\underline{The data preparation in R}\
 Import package to do with the data cleaning and load the data
 ```r
 # Load a library
