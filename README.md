@@ -21,4 +21,11 @@ The future marketing program will be guided by three key questions:
 1. How do annual members and casual riders use Cyclistic bikes differently?
 2. Why would casual riders buy Cyclistic annual memberships?
 3. How can Cyclistic use digital media to influence casual riders to become members?
+
+### 2. Prepare
+Data source: Cyclistic's historical trip data, specifically the Divvy 2019 Q1 and Divvy 2020 Q1 datasets.
+2019Q1: https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090
+2020Q1: https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855
+
+The data source for this analysis consists of two quarterly files: "Divvy 2019 Q1" and "Divvy 2020 Q2". Each file contains details of ride ID, bike type, start time, end time, start station, end station, start location, end location, and member status.
   
