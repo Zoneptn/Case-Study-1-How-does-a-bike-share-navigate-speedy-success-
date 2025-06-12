@@ -40,12 +40,12 @@ Import package to do with the data cleaning and load the data
 library(tidyverse) 
 
 # Read CSV files
-q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv") 
-q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv") 
+q1_2019 = read_csv("Divvy_Trips_2019_Q1.csv") 
+q1_2020 = read_csv("Divvy_Trips_2020_Q1.csv") 
 ```
 The column names in q1_2019.csv are inconsistent with those in q1_2020.csv, necessitating renaming to ensure uniformity.
 ```r
-(q1_2019 <- rename(q1_2019
+(q1_2019 = rename(q1_2019
 ,ride_id = trip_id
 ,rideable_type = bikeid
 ,started_at = start_time
