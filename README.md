@@ -33,7 +33,7 @@ The data source for this analysis consists of two quarterly files: "Divvy 2019 Q
 
 ### 3.3 Prepare
 Program for data cleaning: R\
-\underline{The data preparation in R}\
+<u>The data preparation in R</u>
 Import package to do with the data cleaning and load the data
 ```r
 # Load a library
@@ -42,6 +42,38 @@ library(tidyverse)
 # Read CSV files
 q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv") 
 q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv") 
+```
+The column names in q1_2019.csv are inconsistent with those in q1_2020.csv, necessitating renaming to ensure uniformity.
+```r
+(q1_2019 <- rename(q1_2019
+,ride_id = trip_id
+,rideable_type = bikeid
+,started_at = start_time
+,ended_at = end_time
+,start_station_name = from_station_name
+,start_station_id = from_station_id
+,end_station_name = to_station_name
+,end_station_id = to_station_id
+,member_casual = usertype
+))
+```
+To consolidate the datasets for unified analysis, specific columns like ride_id and rideable_type are converted to character types, ensuring compatibility for stacking the quarterly data into a single comprehensive dataframe. Irrelevant or inconsistent columns, such as personal geographic coordinates, birth year, gender, and tripduration, are then removed to refine the dataset for focused analysis. This meticulous preparation results in a clean, harmonized dataset ready for in-depth exploration.
+```r
+# Convert ride_id and rideable_type to character so that they can stack correctly
+q1_2019 = mutate(q1_2019, ride_id = as.character(ride_id)
+,rideable_type = as.character(rideable_type))
+
+# Stack individual quarter's data frames into one big data frame
+all_trips = bind_rows(q1_2019, q1_2020)#, q3_2019)#, q4_2019, q1_2020)
+
+# Remove lat, long, birthyear, and gender fields as this data was dropped beginning in 2020
+all_trips = all_trips %>%
+select(-c(start_lat, start_lng, end_lat, end_lng, birthyear, gender, "tripduration"))
+```
+
+```r
+
+
 ```
 
   
