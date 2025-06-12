@@ -14,7 +14,7 @@ This problem will be addressed using the six steps of the data analysis process 
 5. Share
 6. Act
 
-### 1. Ask
+### 3.1 Ask
 Creating a marketing program to convert casual riders into members.
 
 The future marketing program will be guided by three key questions:
@@ -22,7 +22,7 @@ The future marketing program will be guided by three key questions:
 2. Why would casual riders buy Cyclistic annual memberships?
 3. How can Cyclistic use digital media to influence casual riders to become members?
 
-### 2. Prepare
+### 3.2 Prepare
 Data source: Cyclistic's historical trip data, specifically the Divvy 2019 Q1 and Divvy 2020 Q1 datasets.
 
 2019Q1: https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090
@@ -30,4 +30,18 @@ Data source: Cyclistic's historical trip data, specifically the Divvy 2019 Q1 an
 2020Q1: https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855
 
 The data source for this analysis consists of two quarterly files: "Divvy 2019 Q1" and "Divvy 2020 Q2". Each file contains details of ride ID, bike type, start time, end time, start station, end station, start location, end location, and member status.
+
+### 3.3 Prepare
+Program for data cleaning: R\
+\underline{The data preparation in R}
+Import package to do with the data cleaning and load the data
+```r
+# Load a library
+library(tidyverse) 
+
+# Read CSV files
+q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv") 
+q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv") 
+```
+
   
